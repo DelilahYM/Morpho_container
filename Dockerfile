@@ -45,7 +45,7 @@ RUN git clone https://github.com/Morpho-lang/morpho-cli.git \
     && mkdir build \
     && cd build \
     && cmake -DCMAKE_BUILD_TYPE=Release .. \
-    && sudo make install \
+    && make install \
     && cd ../../
     
 # Build Morphoview
@@ -54,7 +54,7 @@ RUN git clone https://github.com/Morpho-lang/morpho-morphoview.git \
     && mkdir build \
     && cd build \
     && cmake -DCMAKE_BUILD_TYPE=Release .. \
-    && sudo make install
+    && make install
 
 # Set default shell to bash
 SHELL ["/bin/bash", "-c"]
