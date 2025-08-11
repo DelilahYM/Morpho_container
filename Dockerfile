@@ -6,7 +6,7 @@ FROM ubuntu:24.04
 LABEL maintainer="Delilah Maloney <Delilah.Maloney@tufts.edu>"
 
 # Help message
-LABEL description="This container contains Morpho installed on ubuntu:24.04.https://github.com/Morpho-lang/morpho"
+LABEL description="This container contains Morpho v0.6.2 installed on ubuntu:24.04.https://github.com/Morpho-lang/morpho"
 
 # Set environment variables
 ENV PATH=/opt/morpho/bin:$PATH \
