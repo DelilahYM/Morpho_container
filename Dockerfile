@@ -15,7 +15,7 @@ ENV PATH=/opt/morpho/bin:$PATH \
     
 # Download and install Anaconda
 RUN apt-get update && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends build-essential wget git ca-certificates locales \
+    && apt-get install -y build-essential wget git ca-certificates locales \
     && locale-gen en_US.UTF-8 \
     && update-locale LANG=en_US.UTF-8 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
