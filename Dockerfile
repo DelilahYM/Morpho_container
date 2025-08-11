@@ -21,7 +21,14 @@ RUN apt-get update && apt-get upgrade -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # apt-get install dependencies
-RUN  apt-get -y install --no-install-recommends build-essential cmake libglfw3-dev libsuitesparse-dev liblapacke-dev povray libfreetype6-dev libunistring-dev
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cmake \
+    libglfw3-dev \
+    libsuitesparse-dev \
+    liblapacke-dev povray \
+    libfreetype6-dev \
+    libunistring-dev
 
 # Build Morpho
 RUN git clone https://github.com/Morpho-lang/morpho.git \
